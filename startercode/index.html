@@ -1,0 +1,56 @@
+<!--HTML always starts with this "HEAD" code-->
+<!DOCTYPE html>
+<!--Set the language to English-->
+<html lang="en">
+    <head>
+   <!--META TAGS-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <meta name="description" content="Black Panther Game"/>
+
+    <title>Black Panther Game</title>
+
+
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
+
+    </head>
+    <body>
+
+    <section class="header">
+      <p class="title">Black Panther</p>
+      <p class="sub-title">A Shell Game</p>
+      <p class="directions">Enter Your Name to Play:</p>
+      <div class="name-input">
+        <input id="name" class="player-name" name="user-name" type="text" placeholder="Who are you?">
+        <br>
+        <br>
+        <button id="name-button" type="button">Click Me!</button>
+      </div>
+
+      <p class="directions">Choose a card.<br> If you get Shuri, you get 5 points; Black Panther: 3 points; Killmonger, 1 point.</p>
+    </section>
+
+    <section class="cards">
+      <img id="card1" class="face-card" src="bplogo.png" alt="black panther logo">
+      <img id="card2" class="face-card" src="bplogo.png" alt="black panther logo">
+      <img id="card3" class="face-card" src="bplogo.png" alt="black panther logo">
+    </section>
+
+
+    <section id="footer">
+      <img class="logo" src="GWC%20logo_2016%20.png" alt="Girls Who Code Logo">
+      <p class="copyright text-center">Made with <strong>vibranium</strong> by "your name" &copy;  2018</p>
+    </section>
+
+    <script src="jquery.js"></script>
+    <script src="main.js"></script>
+    </body>
+</html>
