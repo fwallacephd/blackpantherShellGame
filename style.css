@@ -1,48 +1,39 @@
-* {
-    -ms-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-/*FONTS
+/*Google FONTS
  * font-family: 'Rajdhani', sans-serif;
  */
 
+/* Custom Font*/
 @font-face {
   font-family: BlackPanther;
   src: url(blackpanther.ttf);
+}
+
+/*BODY*/
+body {
+  font-family: 'Rajdhani', sans-serif;
+  text-align: center;
 }
 
 /* HEADER */
 .title {
  font-family: BlackPanther;
  font-size: 55px;
- text-align: center;
  line-height: 10px;
 }
 
 .sub-title {
- font-family: 'Rajdhani', sans-serif;
  font-size: 40px;
  line-height: 4px;
- text-align: center;
 }
 
 .directions {
- font-family: 'Rajdhani', sans-serif;
  font-size: 20px;
- text-align: center;
-}
-
-.name-input {
- text-align: center;
- font-family: 'Rajdhani', sans-serif;
+ font-weight: bold;
 }
 
 .player-name {
- font-size: 30px;
  font-family: 'Rajdhani', sans-serif;
+ font-size: 30px;
 }
 
 #name-button, #tryagain-button {
@@ -52,30 +43,21 @@
 }
 
 /* CARDS */
-.cards {
- text-align: center;
-}
-
 .face-card {
  width: 15%;
  margin: 5px;
 }
 
 .message {
- font-family: 'Rajdhani', sans-serif;
  font-size: 20px;
- text-align: center;
 }
 
 /* FOOTER */
 #footer {
- font-family: 'Rajdhani', sans-serif;
  font-size: 20px;
- text-align: center;
 }
 
 .logo {
  width: 15%;
  max-width: 15%;
- text-align: center;
 }

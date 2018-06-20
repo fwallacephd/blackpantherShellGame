@@ -6,23 +6,29 @@ let logo = "bplogo.png";
 
 
 //Say Hi to the Player
+//Listen for the click on the "Click Me" button
 document.getElementById("name-button").addEventListener("click", function(){
-  name = $("[name=user-name]").val();
+  //get the value in the text box
+  name = document.querySelector(".player-name").value;
+  //say hello to the player using their stated name
   alert("Hi " + name + ". Are you ready to play?");
 });
 
 
 //Randomize the images
+//A function is a recipe we can use over and over.
+//Name a function based on what it is doing
 function randomizeImage(){
-  let imageNumber = Math.floor(Math.random() * 3);
+  //An array of our images
   const image = ["blackpanther.png", "killmonger.png", "shuri.png"];
+  //Get a random number
+  let imageNumber = Math.floor(Math.random() * 3);
+  //Choose the image based on the random number
   let newImage = image[imageNumber]
   return (newImage);
 }
 
-//Determine Winner
-
-
+//
 
 //Click on a Card
 $(".cards").on("click", ".face-card", function(){
@@ -49,25 +55,4 @@ $(".cards").on("click", ".face-card", function(){
 
 });
 
-
-
-//Score function
-
-
-
-//if (state === "back") {
-  //        $("#card").attr("src", "images/ace_of_spades.png");
-  //        state = "front";
-  //      } else {
-  //        $("#card").attr("src", "images/card_back.png");
-  //        state = "back";
-  //      }
-
-//document.querySelector('.cards').addEventListener('click', function(){
-
-  //let imageDOM = document.querySelector(this);
-  //diceDOM.style.display = 'block';
-  //diceDOM.src = image + '.png';
-
-/*Change players, Update Scores - Function */
 
