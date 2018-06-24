@@ -2,7 +2,7 @@
 let nameScore = 0;
 let computerScore = 0;
 let name;
-let logo = "bplogo.png";
+const logo = "bplogo.png";
 
 
 //Say Hi to the Player
@@ -13,7 +13,6 @@ document.getElementById("name-button").addEventListener("click", function(){
   //say hello to the player using their stated name
   alert("Hi " + name + ". Are you ready to play?");
 });
-
 
 //Randomize the images
 //A function is a recipe we can use over and over.
@@ -28,7 +27,16 @@ function randomizeImage(){
   return (newImage);
 }
 
-//
+//Find the winner
+function findWinner(nameScore, computerScore){
+    $("#text").text("Your score is: " + nameScore + ". The computer score is " + computerScore + ".");
+    //if your score is 15 - update the score in the DOM
+  if (nameScore === 15){
+      $("#text").text(name + ", You won!");
+    } else if (computerScore === 15) {
+      $("#text").text("Sorry, " + name + " the computer won!");
+    }
+}
 
 //Click on a Card
 $(".cards").on("click", ".face-card", function(){
@@ -36,23 +44,14 @@ $(".cards").on("click", ".face-card", function(){
   $(this).closest("img").attr("src", randomImage);
   if (randomImage === "shuri.png") {
     nameScore += 5;
-    if (nameScore === 15){
-      $("#text").text(name + ", You won!");
-    } else {
-      $("#text").text("Your score is: " + nameScore + ". The computer score is " + computerScore + ".");
-    }
+    findWinner(nameScore, computerScore);
   } else {
     computerScore += 5;
-    if (computerScore === 15) {
-      $("#text").text("Sorry, " + name + " the computer won!");
-    } else {
-      $("#text").text("Your score is: " + nameScore + ". The computer score is " + computerScore + ".");
-    }
+    findWinner(nameScore, computerScore);
       }
   $("#tryagain-button").on("click", () => {
     $(this).attr("src", logo);
   });
-
 });
 
 
