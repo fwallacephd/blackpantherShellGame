@@ -22,6 +22,7 @@ function randomizeImage(){
   const image = ["blackpanther.png", "killmonger.png", "shuri.png"];
   //Get a random number
   let imageNumber = Math.floor(Math.random() * 3);
+  console.log(imageNumber);
   //Choose the image based on the random number
   let newImage = image[imageNumber]
   return (newImage);
@@ -45,6 +46,7 @@ $(".cards").on("click", ".face-card", function(){
   if (randomImage === "shuri.png") {
     nameScore += 5;
     findWinner(nameScore, computerScore);
+  } else if (randomImage === "claw.png"){
   } else {
     computerScore += 5;
     findWinner(nameScore, computerScore);
