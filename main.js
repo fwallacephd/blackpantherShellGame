@@ -19,7 +19,7 @@ document.getElementById("name-button").addEventListener("click", function(){
 //Name a function based on what it is doing
 function randomizeImage(){
   //An array of our images
-  const image = ["blackpanther.png", "killmonger.png", "shuri.png"];
+  const image = ["blackpanther.png", "killmonger.png", "shuri.png"]
   //Get a random number
   let imageNumber = Math.floor(Math.random() * 3);
   console.log(imageNumber);
